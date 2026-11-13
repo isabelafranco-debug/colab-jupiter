@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rotación inteligente · Santa Cruz, Bolivia</title>
+<style>
+:root{--bg:#fbfaf6;--card:#fff;--ink:#1f2a1f;--mut:#5d6b5d;--line:#dfe5d8;--g:#2f7d3b;--g2:#e6f2e3;--warn:#b45309;--w2:#fdf0dc;--bare:#e9ddc7}
+@media (prefers-color-scheme:dark){:root{--bg:#121812;--card:#1a231a;--ink:#e8efe6;--mut:#9fb09f;--line:#2b392b;--g:#6cc37a;--g2:#1f3322;--warn:#f0b35a;--w2:#3a2d16;--bare:#3b3426}}
+*{box-sizing:border-box}body{margin:0;font:16px/1.5 system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+.w{max-width:1100px;margin:auto;padding:0 20px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);z-index:5}
+nav a{margin-left:18px;color:var(--mut);text-decoration:none}nav b{font-size:18px}
+.hero{padding:56px 0 36px}.hero h1{font-size:clamp(28px,5vw,46px);line-height:1.15;margin:0 0 12px;max-width:760px}.hero p{color:var(--mut);max-width:640px;font-size:18px}
+.btn{display:inline-block;background:var(--g);color:#fff;border:0;padding:12px 22px;border-radius:10px;font:600 16px system-ui;cursor:pointer;text-decoration:none}
+.btn.o{background:none;color:var(--g);border:1.5px solid var(--g);margin-left:8px}
+section{padding:36px 0}h2{font-size:clamp(22px,3.5vw,32px);margin:0 0 6px}.sub{color:var(--mut);margin:0 0 20px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}.tabs button{padding:9px 18px;border-radius:99px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);font:600 15px system-ui;cursor:pointer}
+.tabs button.on{background:var(--g);color:#fff;border-color:var(--g)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}.card h3{margin:0 0 8px;font-size:18px}
+.ck{list-style:none;padding:0;margin:0}.ck li{padding-left:24px;position:relative;margin:7px 0;color:var(--mut)}.ck li:before{content:"✓";position:absolute;left:0;color:var(--g);font-weight:700}
+.three{background:var(--g2);border-radius:14px;padding:18px;margin-top:18px}
+form.f{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+label{display:block;font-size:13px;color:var(--mut);margin-bottom:3px}select,input[type=number]{width:100%;padding:8px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit}
+input[type=range]{width:100%;accent-color:var(--g)}.yr{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:6px}
+.chips{display:flex;gap:6px;flex-wrap:wrap}.chips button{padding:6px 12px;border-radius:99px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}.chips button.on{background:var(--g2);border-color:var(--g);font-weight:600}
+.msg{padding:12px 14px;border-radius:10px;margin:12px 0;background:var(--g2)}.msg.w2{background:var(--w2);color:var(--warn)}
+.pv{display:inline-block;font-size:12px;padding:3px 9px;border-radius:99px;margin:2px;background:var(--g2)}.pv.s{background:var(--w2);color:var(--warn)}
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:4px 16px;margin:10px 0}summary{cursor:pointer;padding:12px 0;font-weight:600}
+.bar{display:flex;align-items:center;gap:8px;font-size:13px;margin:3px 0}.bar span:first-child{width:190px;color:var(--mut)}.bar i{flex:1;height:8px;background:var(--line);border-radius:5px;overflow:hidden}.bar i b{display:block;height:100%;background:var(--g)}
+.cal{display:grid;grid-template-columns:150px repeat(12,1fr);gap:2px;font-size:11px;margin:8px 0;overflow-x:auto}.cal div{padding:3px;text-align:center;border-radius:3px}.cal .c{background:var(--g);color:#fff}.cal .b{background:var(--bare)}.cal .l{text-align:left;color:var(--mut)}
+.ch{display:flex;align-items:flex-end;gap:3px;height:80px;margin-top:8px}.ch div{flex:1;background:var(--g);border-radius:3px 3px 0 0;min-height:1px}.lb{display:flex;gap:3px;font-size:10px;color:var(--mut)}.lb span{flex:1;text-align:center}
+.small{font-size:13px;color:var(--mut)}footer{padding:30px 0;color:var(--mut);font-size:13px;border-top:1px solid var(--line)}
+</style></head><body>
+<nav><b>🌱 Rotación inteligente</b><div><a href="#como">Cómo funciona</a><a href="#app">Analizar mi finca</a></div></nav>
+<div class="w">
+<div class="hero"><h1>Decide qué sembrar para cuidar tu suelo y tu agua</h1>
+<p>Combinamos observaciones de la NASA con los datos de tu finca para comparar rotaciones de cultivos en Santa Cruz. Una herramienta de apoyo: la decisión final es tuya y de tu técnico.</p>
+<a class="btn" href="#app">Analizar mi finca</a><a class="btn o" href="#como">Ver cómo funciona</a></div>
+
+<section id="como"><h2>Detección y monitoreo de tu finca con satélites</h2><p class="sub">De los datos de la NASA a una decisión de rotación, en cuatro pasos.</p>
+<div class="tabs" id="tabs"></div><div class="grid" id="tabc"></div>
+<div class="three"><b>Toda tu finca en un solo lugar</b>
+<div class="grid" style="margin-top:10px"><div><b>Capas</b><div class="small">Lluvia, calor, frentes fríos, rachas secas y vegetación en un mismo panel.</div></div>
+<div><b>Tus prioridades</b><div class="small">Eliges si te importa más el agua, el ingreso o el suelo.</div></div>
+<div><b>Informe</b><div class="small">Descarga evidencia, vacíos y riesgos para revisarlos con tu técnico.</div></div></div></div></section>
+
+<section id="app"><h2>Analiza tu finca</h2><p class="sub">Completa los datos y compara tu rotación actual con alternativas.</p>
+<div class="msg w2" id="status" hidden></div>
+<form class="f" id="form" onsubmit="return false">
+<div><label>Zona</label><select id="zona"></select>
+<div class="yr"><div><label>Latitud</label><input type="number" step="0.001" id="lat"></div><div><label>Longitud</label><input type="number" step="0.001" id="lon"></div></div></div>
+<div><label>Textura del suelo</label><select id="tex"><option>franco</option><option>arenoso</option><option>arcilloso</option></select>
+<label style="margin-top:8px">Pendiente: <b id="slv">2</b> %</label><input type="range" id="sl" min="0" max="20" step="0.5" value="2">
+<label>Riego (parte del faltante de agua): <b id="irv">0</b> %</label><input type="range" id="ir" min="0" max="100" step="10" value="0"></div>
+<div><label>Años de mi rotación actual</label><select id="ny"><option>1</option><option>2</option><option>3</option></select><div id="yrs"></div></div>
+<div><label>¿Qué me importa más?</label><div class="chips" id="pre"></div>
+<label style="margin-top:8px">Cambio de lluvia: <b id="rnv">0</b> %</label><input type="range" id="rn" min="-30" max="30" step="5" value="0">
+<label>Cambio de temperatura: <b id="tpv">0</b> °C</label><input type="range" id="tp" min="-2" max="4" step="0.5" value="0"></div>
+<div style="grid-column:1/-1"><button class="btn" id="go">Comparar rotaciones</button> <label style="display:inline"><input type="checkbox" id="live"> Usar clima real (NASA POWER)</label></div>
+</form><div id="out"></div></section></div>
+<footer><div class="w">Herramienta de apoyo: no reemplaza el criterio del agricultor ni la asesoría agronómica local. Los cultivos y calendarios son ilustrativos hasta validarlos con técnicos locales. Respeta los términos de uso de cada fuente de datos.</div></footer>
+<script>
+const $=s=>document.querySelector(s),M=["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep","Oct","Nov","Dic"];
+const API=location.protocol==="file:"?"http://localhost:8000":"";
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const TABS={"Detección":[["Satélites NASA",["Clima diario de NASA POWER desde 2010.","NDVI y humedad del suelo (MODIS, SMAP) cuando cargas sus archivos.","Cada dato indica si es real o sintético."]],["Calendario de la finca",["Meses con suelo descubierto.","Campañas expuestas a calor, frentes fríos y rachas secas.","Lluvia intensa sobre suelo sin cobertura."]],["Tus datos",["Rotación actual con doble campaña.","Textura, pendiente y riego.","Cultivos que no puedes o no quieres sembrar."]]],
+"Monitoreo":[["Escenarios",["Menos o más lluvia.","Temperaturas más altas.","El ranking se recalcula al instante."]],["Incertidumbre",["Rango de puntaje según la variabilidad de los años.","Probabilidad de ser la mejor opción.","Aviso si el ranking es sensible a tus prioridades."]],["Procedencia",["Fuente y resolución de cada capa.","Alerta cuando se usan datos sintéticos.","Vacíos de información visibles."]]],
+"Rotaciones":[["Comparación",["Tu rotación actual y al menos tres alternativas.","Ocho criterios: agua, nitrógeno, erosión, suelo, plagas, mercado y clima.","Puntaje descompuesto y explicable."]],["Evidencia",["Por qué se sugiere cada una.","Cifras concretas del clima de tu zona.","Calendario visual de cobertura."]],["Riesgos",["Lo que debe validar un técnico.","Semilla, maquinaria y mercado.","Plagas y suelo locales."]]],
+"Gestión":[["Prioridades",["Agua, ingreso o mejora del suelo.","Ajuste fino de cada criterio en la app de análisis.","Exclusión de cultivos."]],["Informe",["Descarga en un clic.","Evidencia, vacíos y riesgos incluidos.","Útil para hablar con tu técnico."]],["Historial",["Próximamente: guardar análisis por lote.","Próximamente: comparar campañas."]]]};
+let CAT,preset="Equilibrado",A;
+function tabs(k){$("#tabs").innerHTML=Object.keys(TABS).map(t=>`<button class="${t===k?"on":""}" data-t="${t}">${t}</button>`).join("");
+$("#tabc").innerHTML=TABS[k].map(([h,l])=>`<div class="card"><h3>${h}</h3><ul class="ck">${l.map(x=>`<li>${x}</li>`).join("")}</ul></div>`).join("");
+document.querySelectorAll("#tabs button").forEach(b=>b.onclick=()=>tabs(b.dataset.t))}
+tabs("Detección");
+function yrs(){const n=+$("#ny").value,opt=s=>`<option value="">Barbecho</option>`+CAT.cultivos.filter(c=>c.season===s).map(c=>`<option value="${c.crop}">${esc(c.nombre)}</option>`).join("");
+$("#yrs").innerHTML=Array.from({length:n},(_,i)=>`<div class="yr"><select class="v">${opt("verano")}</select><select class="w">${opt("invierno")}</select></div>`).join("");
+if(!yrs.done){document.querySelector(".v").value="soya";yrs.done=1}}
+async function init(){try{CAT=await (await fetch(API+"/api/cultivos")).json()}catch(e){const s=$("#status");s.hidden=false;s.textContent="No se pudo conectar con la API. Inicia: python -m uvicorn api.main:app --reload (con PYTHONPATH=src) y abre http://localhost:8000";return}
+$("#zona").innerHTML=Object.keys(CAT.zonas).map(z=>`<option>${esc(z)}</option>`).join("")+"<option>Otra (ingresar)</option>";
+const z=()=>{const c=CAT.zonas[$("#zona").value];if(c){$("#lat").value=c[0];$("#lon").value=c[1]}};$("#zona").onchange=z;z();
+$("#pre").innerHTML=CAT.prioridades.map(p=>`<button data-p="${p}" class="${p===preset?"on":""}">${esc(p)}</button>`).join("");
+document.querySelectorAll("#pre button").forEach(b=>b.onclick=()=>{preset=b.dataset.p;document.querySelectorAll("#pre button").forEach(x=>x.classList.toggle("on",x===b))});
+[["sl","slv"],["ir","irv"],["rn","rnv"],["tp","tpv"]].forEach(([a,b])=>$("#"+a).oninput=()=>$("#"+b).textContent=$("#"+a).value);
+$("#ny").onchange=yrs;yrs();$("#go").onclick=run}
+async function run(){const cur=[...document.querySelectorAll("#yrs .yr")].map(r=>[r.querySelector(".v").value,r.querySelector(".w").value].filter(Boolean));
+$("#out").innerHTML='<p class="small">Analizando…</p>';
+try{const r=await fetch(API+"/api/analisis",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({lat:+$("#lat").value,lon:+$("#lon").value,use_api:$("#live").checked,texture:$("#tex").value,slope:+$("#sl").value,current:cur,preset,rain_pct:+$("#rn").value,temp_delta:+$("#tp").value,irrigation:+$("#ir").value/100})});A=await r.json()}catch(e){$("#out").innerHTML='<div class="msg w2">Error de conexión con la API.</div>';return}
+if(A.error){$("#out").innerHTML=`<div class="msg w2">Tu rotación tiene cultivos superpuestos:<br>${A.error.map(esc).join("<br>")}</div>`;return}draw()}
+const chart=(v,c)=>{const m=Math.max(...v,1e-9);return `<div class="ch">${v.map(x=>`<div title="${x.toFixed(1)}" style="height:${x/m*100}%"></div>`).join("")}</div><div class="lb">${M.map(x=>`<span>${x[0]}</span>`).join("")}</div>`};
+function draw(){const R=A.rotaciones,best=R[0],act=R.find(r=>r.name==="Actual"),cl=A.climate;
+const synth=Object.values(A.provenance).some(v=>/SINT|DEFECTO/.test(v));
+const cal=rows=>`<div class="cal"><div></div>${M.map(m=>`<div class="l">${m}</div>`).join("")}${rows.map(r=>`<div class="l">${esc(r.label)}</div>${r.months.map(f=>`<div class="${f?"c":"b"}">${f?"■":"·"}</div>`).join("")}`).join("")}</div>`;
+$("#out").innerHTML=`${synth?'<div class="msg w2">Algunas capas usan datos sintéticos o por defecto: no usar como evidencia real.</div>':""}
+<div>${Object.entries(A.provenance).map(([k,v])=>`<span class="pv ${/SINT|DEFECTO/.test(v)?"s":""}">${esc(k)}: ${esc(v)}</span>`).join("")}</div>
+<div class="msg">${best.name==="Actual"?`Con tus prioridades, tu rotación actual es la mejor opción (${best.total.toFixed(2)}).`:`Con tus prioridades, <b>${esc(best.name)}</b> puntúa ${best.total.toFixed(2)} frente a ${act.total.toFixed(2)} de tu rotación actual. Es la mejor en ${Math.round(best.best_prob*100)}% de los escenarios climáticos simulados.`}
+<br><span class="small">Ranking ${A.stable_ranking?"estable":"sensible"} ante cambios de ±20 % en tus prioridades. El rango refleja solo la variabilidad del clima histórico, no la incertidumbre de los parámetros.</span></div>
+${A.notes.map(n=>`<p class="small">• ${esc(n)}</p>`).join("")}
+<h3>Rotaciones comparadas</h3>
+${R.map((r,i)=>`<details ${i?"":"open"}><summary>${esc(r.name)} — ${r.total.toFixed(2)} <span class="small">(rango ${r.p10.toFixed(2)}–${r.p90.toFixed(2)})</span></summary>
+<p>${esc(r.description)}</p><p class="small">${r.years_label.map(esc).join(" · ")}</p>${cal(r.calendar)}
+<p><b>Por qué:</b> ${esc(r.why)}</p>
+${Object.entries(r.scores).map(([k,v])=>`<div class="bar"><span>${esc(CAT.criterios[k])}</span><i><b style="width:${v*100}%"></b></i><span style="width:34px">${v.toFixed(2)}</span></div>`).join("")}
+<p><b>Evidencia</b></p><ul>${r.evidence.map(e=>`<li>${esc(e)}</li>`).join("")}</ul>
+<p><b>Vacíos de información</b></p><ul>${r.gaps.map(e=>`<li>${esc(e)}</li>`).join("")}</ul>
+<p><b>Riesgos a revisar localmente</b></p><ul>${r.risks.map(e=>`<li>${esc(e)}</li>`).join("")}</ul></details>`).join("")}
+<h3>Clima de tu zona (promedio mensual)</h3><div class="grid">
+${[["Lluvia (mm)",cl.m_precip],["Lluvia intensa ≥30 mm (días)",cl.m_heavy],["Calor ≥35 °C (días)",cl.m_heat],["Frente frío ≤10 °C (días)",cl.m_cold],["Racha seca máxima (días)",cl.m_dry],["Vegetación (NDVI)",A.ndvi]].map(([t,v])=>`<div class="card"><b>${t}</b>${chart(v)}</div>`).join("")}</div>
+<p><button class="btn o" style="margin:14px 0 0" onclick="dl()">Descargar informe</button></p>`}
+function dl(){const L=["# Informe de rotación de cultivos","","> Herramienta de apoyo. No reemplaza el criterio del agricultor ni la asesoría local.","","## Procedencia",...Object.entries(A.provenance).map(([k,v])=>`- ${k}: ${v}`)];
+A.rotaciones.forEach(r=>L.push("",`## ${r.name} — ${r.total.toFixed(2)} (rango ${r.p10.toFixed(2)}–${r.p90.toFixed(2)})`,r.description,...r.years_label.map(y=>"- "+y),r.why,"","Evidencia:",...r.evidence.map(e=>"- "+e),"Vacíos:",...r.gaps.map(e=>"- "+e),"Riesgos:",...r.risks.map(e=>"- "+e)));
+const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([L.join("\n")],{type:"text/markdown"}));a.download="informe_rotacion.md";a.click()}
+init();
+</script></body></html>

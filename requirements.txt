@@ -1,0 +1,11 @@
+pandas>=2.0
+numpy>=1.24
+requests>=2.31
+streamlit>=1.36
+pytest>=7.4
+# Opcionales para ejercicios avanzados:
+# earthaccess      # descarga de datos NASA Earthdata (SMAP, GPM, MODIS)
+# xarray, rioxarray, folium, scikit-learn
+fastapi>=0.110
+uvicorn>=0.27
+httpx>=0.26

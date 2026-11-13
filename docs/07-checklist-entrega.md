@@ -1,0 +1,11 @@
+# Checklist de entrega
+- [ ] ≥ 3 datasets NASA usados y documentados (fuente, resolución, limitaciones)
+- [ ] ≥ 3 rotaciones comparadas (incluye la actual)
+- [ ] Cada rotación: por qué, evidencia, beneficios, vacíos, riesgos
+- [ ] Prioridades del agricultor ajustables
+- [ ] Incertidumbre visible (rangos, nº de años, sensibilidad)
+- [ ] Mensaje claro: apoya, no reemplaza el juicio local
+- [ ] Lenguaje simple (probado con alguien no técnico)
+- [ ] README con instrucciones reproducibles + tests pasando
+- [ ] Video/demo de 2–3 min
+- [ ] Citas y créditos a datos NASA y a cualquier librería/IA usada

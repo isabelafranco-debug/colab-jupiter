@@ -1,0 +1,18 @@
+{
+  "Doble campaña diversificada": {
+    "description": "Soya y trigo, luego maíz y girasol: dos campañas por año y familias distintas.",
+    "years": [["soya", "trigo"], ["maiz_verano", "girasol"]]
+  },
+  "Resistente a sequía": {
+    "description": "Sorgo, chía, sésamo y garbanzo: menor demanda de agua y tolerancia a rachas secas.",
+    "years": [["sorgo", "chia"], ["sesamo"], ["sorgo", "garbanzo"]]
+  },
+  "Cobertura y abono verde": {
+    "description": "Intercala coberturas y leguminosas para proteger el suelo del invierno y aportar nitrógeno.",
+    "years": [["soya", "nabo_forrajero"], ["mucuna", "trigo"], ["maiz_verano", "crotalaria"]]
+  },
+  "Intensiva de ingreso": {
+    "description": "Dos campañas comerciales cada año con soya, maíz de invierno y girasol.",
+    "years": [["soya", "maiz_invierno"], ["soya", "girasol"]]
+  }
+}

@@ -1,0 +1,15 @@
+crop,nombre,family,season,sow_month,harvest_month,water_need_mm,n_fixing,erosion,organic,market,cold_sensitive,heat_sensitive,drought_sens,tipo
+soya,Soya,fabaceae,verano,11,4,550,0.9,0.4,0.5,0.8,1,1,0.8,cultivo
+maiz_verano,Maíz (verano),poaceae,verano,11,4,600,0.0,0.35,0.55,0.65,0,1,0.8,cultivo
+sorgo,Sorgo,poaceae,verano,11,4,420,0.0,0.5,0.55,0.5,1,0,0.4,cultivo
+arroz,Arroz,poaceae,verano,12,5,700,0.0,0.3,0.4,0.6,1,1,0.9,cultivo
+sesamo,Sésamo,pedaliaceae,verano,2,5,320,0.0,0.4,0.4,0.6,1,0,0.4,cultivo
+mucuna,Mucuna (abono verde),fabaceae,verano,11,4,400,0.9,0.9,0.85,0.1,1,0,0.3,cobertura
+maiz_invierno,Maíz (invierno),poaceae,invierno,5,10,380,0.0,0.35,0.55,0.6,1,0,0.7,cultivo
+trigo,Trigo,poaceae,invierno,5,9,280,0.0,0.55,0.55,0.6,0,0,0.5,cultivo
+girasol,Girasol,asteraceae,invierno,5,9,300,0.0,0.55,0.5,0.7,0,0,0.4,cultivo
+chia,Chía,lamiaceae,invierno,5,9,220,0.0,0.5,0.45,0.7,0,0,0.3,cultivo
+garbanzo,Garbanzo,fabaceae,invierno,5,8,200,0.7,0.45,0.5,0.6,0,0,0.3,cultivo
+nabo_forrajero,Nabo forrajero (cobertura),brassicaceae,invierno,5,8,180,0.0,0.85,0.75,0.1,0,0,0.2,cobertura
+crotalaria,Crotalaria (abono verde),fabaceae,invierno,5,8,200,0.8,0.85,0.8,0.1,0,0,0.2,cobertura
+avena_cobertura,Avena (cobertura),poaceae,invierno,5,8,200,0.0,0.8,0.8,0.1,0,0,0.2,cobertura
